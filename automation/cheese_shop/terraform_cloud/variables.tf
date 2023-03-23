@@ -21,6 +21,12 @@ variable "oauth_token" {
   description = "OAuth token for VCS integration (GitHub)"
 }
 
+variable "doppler_token" {
+  type        = string
+  sensitive   = true
+  description = "Doppler auth token for secret retrieval"
+}
+
 variable "workspaces" {
   description = <<EOT
 Map containing all workspaces and respective configurations for Terraform Cloud.

@@ -13,5 +13,13 @@ terraform {
     tfe = {
       version = "~> 0.42.0"
     }
+    doppler = {
+      source  = "DopplerHQ/doppler"
+      version = "~> 1.1.0"
+    }
   }
+}
+
+provider "doppler" {
+  doppler_token = var.doppler_token
 }

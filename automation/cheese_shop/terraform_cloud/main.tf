@@ -1,3 +1,7 @@
+### SECRETS
+data "doppler_secrets" "this" {}
+
+### OTHER RESOURCES
 resource "tfe_organization" "org" {
   name  = var.organization_name
   email = var.organization_email
@@ -8,7 +12,7 @@ resource "tfe_oauth_client" "github" {
   organization     = tfe_organization.org.name
   api_url          = "https://api.github.com"
   http_url         = "https://github.com"
-  oauth_token      = var.oauth_token # From TF_VAR_oauth_token env var
+  oauth_token      = data.doppler_secrets.this.map.TFE_GH_TOKEN
   service_provider = "github"
 }
 
