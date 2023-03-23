@@ -1,6 +1,12 @@
 ### SECRETS
 data "doppler_secrets" "this" {}
 
+### LOCALS
+locals {
+  # VCS integration token for TF Cloud <-> GitHub
+  oauth_token_id = "ot-WwTiHQLQykekmhjk"
+}
+
 ### OTHER RESOURCES
 resource "tfe_organization" "org" {
   name  = var.organization_name
@@ -34,7 +40,7 @@ resource "tfe_workspace" "workspace" {
     content {
       identifier     = "${var.organization_name}/${vcs_repo.value["repository"]}"
       branch         = vcs_repo.value["branch"]
-      oauth_token_id = vcs_repo.value["oauth_token_id"]
+      oauth_token_id = lookup(vcs_repo.value, "oauth_token_id", null) == null ? local.oauth_token_id : vcs_repo.value["oauth_token_id"]
     }
   }
 }
