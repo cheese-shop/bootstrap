@@ -11,6 +11,7 @@ workspaces = {
       {
         repository = "bootstrap"
         branch = "main"
+        oauth_token_id = "ot-WwTiHQLQykekmhjk"
       }
     ]
   }

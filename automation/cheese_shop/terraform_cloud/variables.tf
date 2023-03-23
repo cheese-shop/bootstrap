@@ -25,7 +25,8 @@ variable "oauth_token" {
 variable "doppler_token" {
   type        = string
   sensitive   = true
-  description = "Doppler auth token for secret retrieval"
+  description = "Doppler auth token for secret retrieval."
+  default     = ""
 }
 
 variable "workspaces" {
