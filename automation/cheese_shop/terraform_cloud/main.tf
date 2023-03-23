@@ -7,14 +7,14 @@ resource "tfe_organization" "org" {
   email = var.organization_email
 }
 
-resource "tfe_oauth_client" "github" {
-  name             = "github-oauth-client"
-  organization     = tfe_organization.org.name
-  api_url          = "https://api.github.com"
-  http_url         = "https://github.com"
-  oauth_token      = data.doppler_secrets.this.map.TFE_GH_TOKEN
-  service_provider = "github"
-}
+#resource "tfe_oauth_client" "github" {
+#  name             = "github-oauth-client"
+#  organization     = tfe_organization.org.name
+#  api_url          = "https://api.github.com"
+#  http_url         = "https://github.com"
+#  oauth_token      = data.doppler_secrets.this.map.TFE_GH_TOKEN
+#  service_provider = "github"
+#}
 
 resource "tfe_workspace" "workspace" {
   for_each           = var.workspaces
@@ -34,7 +34,7 @@ resource "tfe_workspace" "workspace" {
     content {
       identifier     = "${var.organization_name}/${vcs_repo.value["repository"]}"
       branch         = vcs_repo.value["branch"]
-      oauth_token_id = tfe_oauth_client.github.oauth_token_id
+      oauth_token_id = vcs_repo.value["oauth_token_id"]
     }
   }
 }

@@ -59,14 +59,14 @@ To do this:
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.4.0 |
 | <a name="requirement_doppler"></a> [doppler](#requirement\_doppler) | ~> 1.1.0 |
-| <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | ~> 0.42.0 |
+| <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | ~> 0.43.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_doppler"></a> [doppler](#provider\_doppler) | ~> 1.1.0 |
-| <a name="provider_tfe"></a> [tfe](#provider\_tfe) | 0.42.0 |
+| <a name="provider_doppler"></a> [doppler](#provider\_doppler) | 1.1.7 |
+| <a name="provider_tfe"></a> [tfe](#provider\_tfe) | 0.43.0 |
 
 ## Modules
 
@@ -76,7 +76,6 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [tfe_oauth_client.github](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/oauth_client) | resource |
 | [tfe_organization.org](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/organization) | resource |
 | [tfe_variable.variable](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
 | [tfe_workspace.workspace](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
@@ -86,7 +85,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_doppler_token"></a> [doppler\_token](#input\_doppler\_token) | Doppler auth token for secret retrieval | `string` | n/a | yes |
+| <a name="input_doppler_token"></a> [doppler\_token](#input\_doppler\_token) | Doppler auth token for secret retrieval. | `string` | `""` | no |
 | <a name="input_oauth_token"></a> [oauth\_token](#input\_oauth\_token) | OAuth token for VCS integration (GitHub). May not be used in favor of secret manager integration. | `string` | `""` | no |
 | <a name="input_organization_email"></a> [organization\_email](#input\_organization\_email) | Terraform Cloud Organization email. | `string` | n/a | yes |
 | <a name="input_organization_name"></a> [organization\_name](#input\_organization\_name) | Terraform Cloud Organization name. | `string` | n/a | yes |
