@@ -18,7 +18,8 @@ variable "organization_email" {
 variable "oauth_token" {
   type        = string
   sensitive   = true
-  description = "OAuth token for VCS integration (GitHub)"
+  description = "OAuth token for VCS integration (GitHub). May not be used in favor of secret manager integration."
+  default     = ""
 }
 
 variable "doppler_token" {
