@@ -15,6 +15,7 @@ resource "github_repository" "repository" {
   name        = each.key
   description = each.value.description
   visibility  = each.value.visibility
+  auto_init   = true
 }
 
 resource "github_branch_protection_v3" "branch_protection" {
