@@ -7,7 +7,7 @@ workspaces = {
     auto_apply         = true
     terraform_version  = "~> 1.4.0"
     working_directory  = "/automation/cheese_shop/terraform_cloud"
-    trigger_prefixes   = "/automation/cheese_shop/terraform_cloud"
+    trigger_prefixes   = ["/automation/cheese_shop/terraform_cloud"]
     vcs_repo           = [
       {
         repository = "bootstrap"
@@ -21,7 +21,7 @@ workspaces = {
     auto_apply         = true
     terraform_version  = "~> 1.4.0"
     working_directory  = "/automation/cheese_shop/github"
-    trigger_prefixes   = "/automation/cheese_shop/github"
+    trigger_prefixes   = ["/automation/cheese_shop/github"]
     vcs_repo           = [
       {
         repository = "bootstrap"
