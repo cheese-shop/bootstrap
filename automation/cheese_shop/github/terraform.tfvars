@@ -7,7 +7,17 @@ org_bootstrap_repo_name = "bootstrap"
 
 org_repositories = {
   "reusable-workflows" = {
-    description = "Contains all GitHub configurations"
+    description = "Library containing all GitHub reusable workflows."
+    visibility  = "public"
+    branch_protection = {
+      branch = "main"
+      restrictions = {
+        users = ["k0kazpt"]
+      }
+    }
+  }
+  "terraform-modules" = {
+    description = "Library contains all private Terraform modules."
     visibility  = "public"
     branch_protection = {
       branch = "main"
@@ -17,7 +27,7 @@ org_repositories = {
     }
   }
   "github-manager" = {
-    description = "Contains all GitHub configurations"
+    description = "Contains all GitHub configurations (except bootstrap)."
     visibility  = "public"
     branch_protection = {
       branch = "main"
