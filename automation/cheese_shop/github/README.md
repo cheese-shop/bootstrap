@@ -1,10 +1,17 @@
 # GitHub automation
+This folder will contain Terraform code that will help in automation of initial GitHub configs.
 
+This bootstrapping code will be responsible for setting up initial repositories so that all further execution can be outside the scope of "bootstrapping":
+1. Reusable GitHub worflows: Reusable workflows that can be then sourced in other repos to perform common CI/CD tasks;
+2. Reusable Terraform modules: Reusable private Terraform modules for functionality not avialable publicly that can be sourced in other code;
+3. GitHub Manager: Setup of all GitHub related confs: users, teams, repos, policies, rules, etc...
 
 # Pending
-
+* This automation procedure is simplified to jumpstart next steps. Acknowledged improvements are:
+  * Terraform module creation and repo separation of configs and source;
 
 # Instructions
+This code folder is integrated with TF Cloud. Git changes will trigger runs there.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
