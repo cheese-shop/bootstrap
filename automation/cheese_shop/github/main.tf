@@ -1,6 +1,5 @@
-#data "github_organization" "cheese_shop" {
-#  name = "cheese-shop"
-#}
+### Get secrets
+data "doppler_secrets" "this" {}
 
 resource "github_organization_settings" "test" {
   billing_email = var.org_billing_email
