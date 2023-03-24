@@ -22,6 +22,10 @@ terraform {
 }
 
 provider "github" {
-  owner = "cheese-shop"
-  #owner = "k0kazpt"
+  owner = var.org_name
+  token = data.doppler_secrets.this.map.ORG_GH_TOKEN
+}
+
+provider "doppler" {
+  doppler_token = var.doppler_token
 }

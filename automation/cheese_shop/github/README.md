@@ -19,6 +19,7 @@
 
 | Name | Version |
 |------|---------|
+| <a name="provider_doppler"></a> [doppler](#provider\_doppler) | 1.1.7 |
 | <a name="provider_github"></a> [github](#provider\_github) | 5.18.3 |
 
 ## Modules
@@ -33,6 +34,7 @@ No modules.
 | [github_branch_protection_v3.branch_protection](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection_v3) | resource |
 | [github_organization_settings.test](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings) | resource |
 | [github_repository.repository](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [doppler_secrets.this](https://registry.terraform.io/providers/DopplerHQ/doppler/latest/docs/data-sources/secrets) | data source |
 
 ## Inputs
 
