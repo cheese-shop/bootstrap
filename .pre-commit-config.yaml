@@ -16,10 +16,10 @@ repos:
     rev: v1.77.1
     hooks:
       - id: terraform_docs
+      - id: terraform_fmt
   - repo: https://github.com/gruntwork-io/pre-commit
     rev: v0.1.19
     hooks:
-      - id: terraform-fmt
       - id: terragrunt-hclfmt
       - id: terraform-validate
         files: ^examples/
