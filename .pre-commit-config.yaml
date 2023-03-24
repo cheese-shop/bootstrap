@@ -1,6 +1,6 @@
 ---
 ci:
-  skip: [terraform_docs, terraform-validate, tflint, terragrunt-hclfmt]
+  skip: [terraform_docs, terraform_fmt, terraform-validate, tflint, terragrunt-hclfmt]
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
