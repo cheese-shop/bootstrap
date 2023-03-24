@@ -30,6 +30,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [github_app_installation_repositories.pre-commit-ci-repos](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/app_installation_repositories) | resource |
 | [github_branch_protection_v3.bootstrap](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection_v3) | resource |
 | [github_branch_protection_v3.branch_protection](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection_v3) | resource |
 | [github_organization_settings.test](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_settings) | resource |
